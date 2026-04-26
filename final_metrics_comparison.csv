@@ -1,0 +1,4 @@
+label,total_return,cagr,volatility,sharpe,max_drawdown,calmar
+Regime Strategy,5.314,0.0606,0.1069,0.6045,-0.3055,0.1985
+Buy & Hold,11.7538,0.0847,0.1855,0.5316,-0.5678,0.1493
+Soft GMM Strategy,4.6202,0.0567,0.0961,0.6224,-0.2917,0.1944
