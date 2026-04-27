@@ -552,7 +552,8 @@ warnings.filterwarnings('ignore')
 
 
 
-os.chdir(r"C:\Users\Vaishnavi\OneDrive\Documents\Desktop\MarketRegime")
+import pathlib
+os.chdir(pathlib.Path(__file__).parent)
 
 # ── MongoDB connection ──
 # @st.cache_resource
