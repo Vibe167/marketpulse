@@ -26,7 +26,7 @@ GMAIL_ADDRESS        = st.secrets["GMAIL_ADDRESS"]
 GMAIL_APP_PASSWORD   = st.secrets["GMAIL_APP_PASSWORD"]
 
 def send_verification_email(to_email, username, token):
-    link = f"https://marketregimeai.streamlit.app?verify={token}"
+    "redirect_uri": "https://marketregimeai.streamlit.app",
     msg = MIMEMultipart()
     msg["From"]    = GMAIL_ADDRESS
     msg["To"]      = to_email
