@@ -1069,6 +1069,9 @@ if page == "🏠  Live Dashboard":
         sp500, vix = load_live_data()
         features   = compute_features_live(sp500, vix)
 
+  if sp500.empty or vix.empty or features.empty:
+        st.error("Unable to fetch live market data. Please try again.")
+        st.stop()
     latest_ret = float(np.log(sp500['Close'].iloc[-1]/sp500['Close'].iloc[-2]))
     latest_vix = float(vix['Close'].iloc[-1])
     latest_vol = float(features['realized_vol'].iloc[-1])
