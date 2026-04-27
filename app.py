@@ -971,13 +971,17 @@ def load_historical_data():
     features = pd.read_csv('features_20d.csv',   index_col=0, parse_dates=True)
     return features.join(regimes['kmeans_regime'], how='inner').dropna()
 
-@st.cache_data
+@st.cache_data(ttl=300)
 def load_live_data():
-    sp500 = yf.download("^GSPC", period="6mo", progress=False, auto_adjust=True)
-    vix   = yf.download("^VIX",  period="6mo", progress=False, auto_adjust=True)
-    if isinstance(sp500.columns, pd.MultiIndex): sp500.columns = sp500.columns.get_level_values(0)
-    if isinstance(vix.columns,   pd.MultiIndex): vix.columns   = vix.columns.get_level_values(0)
-    return sp500[['Close']].dropna(), vix[['Close']].dropna()
+    try:
+        sp500 = yf.download("^GSPC", period="6mo", progress=False, auto_adjust=True)
+        vix   = yf.download("^VIX",  period="6mo", progress=False, auto_adjust=True)
+        if isinstance(sp500.columns, pd.MultiIndex): sp500.columns = sp500.columns.get_level_values(0)
+        if isinstance(vix.columns,   pd.MultiIndex): vix.columns   = vix.columns.get_level_values(0)
+        return sp500[['Close']].dropna(), vix[['Close']].dropna()
+    except Exception as e:
+        st.error(f"Failed to fetch market data: {e}")
+        st.stop()
 
 def compute_features_live(sp500, vix, W=20):
     data = pd.DataFrame(index=sp500.index)
