@@ -258,8 +258,6 @@ This project is accompanied by a research paper:
 | Member | Role |
 |--------|------|
 | Vaishnavi | Lead — Feature engineering, LSTM model, clustering, backtesting, web app |
-| Member 2 | Data pipeline, multi-asset analysis |
-| Member 3 | Paper writing, LaTeX formatting, arXiv submission |
 
 ---
 
