@@ -1,4 +1,4 @@
-# 📈 MarketPulse — Market Regime Detection System
+#  MarketPulse — Market Regime Detection System
 
 > Unsupervised deep learning pipeline that identifies hidden market regimes from 30 years of S&P 500 data — Bull, Transition, and Crisis states — validated statistically and backtested against buy-and-hold.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 🎯 What This Project Does
+## ✔️ What This Project Does
 
 Most financial models assume markets behave the same way all the time. They don't. This system automatically detects **which behavioral state the market is currently in** — without any human-defined labels — and recommends portfolio allocation accordingly.
 
@@ -21,7 +21,7 @@ Most financial models assume markets behave the same way all the time. They don'
 
 ---
 
-## ✨ Key Features
+## ✔️Key Features
 
 - **Live regime detection** — Downloads today's market data and classifies current regime in real time
 - **LSTM Autoencoder** — Compresses 30-day market windows into 16-dimensional latent representations
@@ -33,7 +33,7 @@ Most financial models assume markets behave the same way all the time. They don'
 
 ---
 
-## 🏗️ Project Architecture
+## ✔️Project Architecture
 
 ```
 Raw Data (yfinance)
@@ -55,7 +55,7 @@ Portfolio Backtest + Live Dashboard
 
 ---
 
-## 📊 The 8 Features
+## ✔️The 8 Features
 
 | Feature | Description | Why It Matters |
 |---------|-------------|----------------|
@@ -72,7 +72,7 @@ Portfolio Backtest + Live Dashboard
 
 ---
 
-## 🧠 Model Details
+## ✔️Model Details
 
 ### LSTM Autoencoder
 
@@ -100,7 +100,7 @@ Loss: MSE reconstruction error
 
 ---
 
-## 📁 Project Structure
+## ✔️Project Structure
 
 ```
 MarketRegime/
@@ -141,7 +141,7 @@ MarketRegime/
 
 ---
 
-## 🚀 Getting Started
+## ✔️Getting Started
 
 ### Prerequisites
 
@@ -183,7 +183,7 @@ Open `http://localhost:8501` in your browser.
 
 ---
 
-## 📦 Requirements
+## ✔️Requirements
 
 ```
 streamlit
@@ -208,7 +208,7 @@ pip install streamlit pandas numpy matplotlib plotly yfinance torch scikit-learn
 
 ---
 
-## 📈 Results
+## ✔️Results
 
 | Metric | Adaptive Strategy | Static 60/40 |
 |--------|------------------|--------------|
@@ -224,7 +224,7 @@ pip install streamlit pandas numpy matplotlib plotly yfinance torch scikit-learn
 
 ---
 
-## 🌐 Web Application
+## ✔️Web Application
 
 The Streamlit app has 4 pages:
 
@@ -237,7 +237,7 @@ The Streamlit app has 4 pages:
 
 ---
 
-## 🔬 Research Paper
+## ✔️Research Paper
 
 This project is accompanied by a research paper:
 
@@ -253,7 +253,7 @@ This project is accompanied by a research paper:
 
 ---
 
-## 👥 Team
+## ✔️Team
 
 | Member | Role |
 |--------|------|
@@ -261,19 +261,19 @@ This project is accompanied by a research paper:
 
 ---
 
-## ⚠️ Disclaimer
+## ✔️Disclaimer
 
 This project is for **educational and research purposes only**. It is not financial advice. Do not make real investment decisions based on this system.
 
 ---
 
-## 📄 License
+## ✔️License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgements
+## ✔️Acknowledgements
 
 - [yfinance](https://github.com/ranaroussi/yfinance) for market data
 - [PyTorch](https://pytorch.org/) for deep learning framework
