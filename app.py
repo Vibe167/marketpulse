@@ -952,7 +952,9 @@ def get_google_auth_url():
         "scope":         "openid email profile",
         "access_type":   "offline"
     }
-    return "https://accounts.google.com/o/oauth2/auth?" + urlencode(params)
+    url = "https://accounts.google.com/o/oauth2/auth?" + urlencode(params)
+    st.write("DEBUG URL:", url)  # ADD THIS LINE
+    return url
 
 def get_google_user_info(code):
     import requests
