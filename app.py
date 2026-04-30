@@ -1114,7 +1114,7 @@ if not st.session_state.signed_in:
             st.markdown("<div style='text-align:center;font-family:Share Tech Mono,monospace;font-size:10px;color:#446688;letter-spacing:2px;'>── OR ──</div>", unsafe_allow_html=True)
             st.markdown("<br>", unsafe_allow_html=True)
             google_auth_url = get_google_auth_url()
-            google_btn = f"<a href='{google_auth_url}' target='_self' referrerpolicy='no-referrer-when-downgrade' style='display:block;text-align:center;padding:12px;background:#ffffff;color:#050d1a;border-radius:6px;font-family:Rajdhani,sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-decoration:none;'>🔵 SIGN IN WITH GOOGLE</a>"
+            google_btn = f"<a href='{https://accounts.google.com/o/oauth2/auth?client_id=971921005826-oj9tc1sp512bhpcfpofjj3jccuj8p64j.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmarketregimeai.streamlit.app&response_type=code&scope=openid+email+profile&access_type=offline}' target='_self' referrerpolicy='no-referrer-when-downgrade' style='display:block;text-align:center;padding:12px;background:#ffffff;color:#050d1a;border-radius:6px;font-family:Rajdhani,sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-decoration:none;'>🔵 SIGN IN WITH GOOGLE</a>"
             st.markdown(google_btn, unsafe_allow_html=True)
 
         with tab2:
